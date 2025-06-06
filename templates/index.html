@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ISBN VALIDATOR</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>ISBN VALIDATOR by Fiqri</h1>
+    <form method="POST">
+      <input type="text" name="isbn" placeholder="Masukkan ISBN (10 atau 13 digit)" required>
+      <button type="submit">Cek</button>
+    </form>
+
+    {% if hasil %}
+  <div class="hasil">{{ hasil }}</div>
+{% endif %}
+
+  </div>
+</body>
+</html>
